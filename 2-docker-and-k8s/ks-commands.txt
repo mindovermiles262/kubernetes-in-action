@@ -1,0 +1,10 @@
+ks run kubia --image=luksa/kubia --port=8080 --generator=run/v1
+=> Creates Replication Controller named kubia
+
+ks expose rc kubia --type=LoadBalancer --name=kubia-http
+
+ks get services
+=> Get IP address of exposed LoadBalancer
+
+minikube dashboard
+=> Show Kubernetes Dashboard in Minikube
